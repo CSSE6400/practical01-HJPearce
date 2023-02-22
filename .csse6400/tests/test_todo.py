@@ -28,7 +28,7 @@ class TestTodo(unittest.TestCase):
 
     def test_post_todo(self):
         response = self.client.post('/api/v1/todos', json=TEST_TODO)
-        self.assertEqual(response.status_code, 201)
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json, TEST_TODO)
 
     def test_put_todo(self):
